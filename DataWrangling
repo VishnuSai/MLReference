@@ -1,0 +1,33 @@
+## Load libraries
+
+import pandas as pd
+import numpy as np
+
+## load dataset
+inputData = pd.read_csv("C:/Users/vishnu.seelam/Downloads/phone_data.csv")
+
+## View dataset
+inputData.head()
+
+## Showcase all column names
+list(inputData)
+
+## changing column name
+##df = df.rename(columns={'oldName1': 'newName1', 'oldName2': 'newName2'})
+inputData = inputData.rename(columns = {'network type' : 'network_type'})
+
+## datatypes across columns
+inputData.dtypes
+
+## count of rows
+inputData['item'].count()
+
+## unique values in a column
+inputData.month.unique()
+
+# Get the sum of the durations per month
+data.groupby('month')['duration'].sum()
+
+## https://www.shanelynn.ie/summarising-aggregation-and-grouping-data-in-python-pandas/
+
+## https://data36.com/pandas-tutorial-2-aggregation-and-grouping/
